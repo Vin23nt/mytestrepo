@@ -138,7 +138,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea name="" class="form-control" id="" cols="30" rows="7" placeholder="Message"></textarea>
+									<textarea name="" class="form-control" id="messageField" cols="30" rows="7" placeholder="Message"></textarea>
 								</div>
 							</div>
 							<div class="col-md-12">
@@ -151,7 +151,21 @@
 				</div>
 			</div>
 	</div>
+		
 	
+	<script>
+		dataLayer.push({
+            'event': 'formSubmission',
+            'formType': 'contactForm',
+            'formData': {
+                'name': document.getElementById('nameField').value,
+                'email': document.getElementById('emailField').value,
+                'message': document.getElementById('messageField').value
+            }
+        });
+	</script>
+		
+
 	<div id="fh5co-started">
 		<div class="overlay"></div>
 		<div class="container">
